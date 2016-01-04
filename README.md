@@ -1,6 +1,6 @@
-# hubot-help
+# hubot-help-private
 
-A hubot script to show available hubot commands
+A hubot script to show available hubot commands as private message
 
 See [`src/help.coffee`](src/help.coffee) for full documentation.
 
@@ -8,12 +8,12 @@ See [`src/help.coffee`](src/help.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install hubot-help --save`
+`npm install hubot-help-private --save`
 
-Then add **hubot-help** to your `external-scripts.json`:
+Then add **hubot-help-private** to your `external-scripts.json`. Make sure to remove **hubot-help**:
 
 ```json
-["hubot-help"]
+["hubot-help-private"]
 ```
 
 ## Sample Interaction
