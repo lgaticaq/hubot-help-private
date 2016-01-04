@@ -1,7 +1,7 @@
 {
   "name": "hubot-help-private",
   "description": "A hubot script to show available hubot commands as private message",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",
   "keywords": [
