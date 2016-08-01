@@ -19,7 +19,7 @@
     "hubot": "2.x"
   },
   "devDependencies": {
-    "mocha": "2.5.3",
+    "mocha": "3.0.0",
     "chai": "*",
     "sinon-chai": "*",
     "sinon": "1.17.5",
