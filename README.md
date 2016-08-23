@@ -1,26 +1,28 @@
 # hubot-help-private
 
-A hubot script to show available hubot commands as private message
+[![npm version](https://img.shields.io/npm/v/hubot-help-private.svg?style=flat-square)](https://www.npmjs.com/package/hubot-help-private)
+[![npm downloads](https://img.shields.io/npm/dm/hubot-help-private.svg?style=flat-square)](https://www.npmjs.com/package/hubot-help-private)
+[![Build Status](https://img.shields.io/travis/lgaticaq/hubot-help-private.svg?style=flat-square)](https://travis-ci.org/lgaticaq/hubot-help-private)
+[![Coverage Status](https://img.shields.io/coveralls/lgaticaq/hubot-help-private/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/hubot-help-private?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/hubot-help-private.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/hubot-help-private)
+[![dependency Status](https://img.shields.io/david/lgaticaq/hubot-help-private.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-help-private#info=dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/lgaticaq/hubot-help-private.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-help-private#info=devDependencies)
 
-See [`src/help.coffee`](src/help.coffee) for full documentation.
+> A hubot script to show available hubot commands as private message
 
 ## Installation
-
-In hubot project repo, run:
-
-`npm install hubot-help-private --save`
-
-Then add **hubot-help-private** to your `external-scripts.json`. Make sure to remove **hubot-help**:
-
-```json
-["hubot-help-private"]
+```bash
+npm i -S hubot-help-private
 ```
 
-## Sample Interaction
+add `["hubot-help-private"]` to `external-scripts.json`.
 
-```
-user1>> hubot help
-hubot>> hubot help - Displays all of the help commands that Hubot knows about.
-hubot>> hubot help <query> - Displays all help commands that match <query>.
+## Examples
 
-```
+`hubot help` -> `Displays all of the help commands that Hubot knows about.`
+
+`hubot help <query>` -> `Displays all help commands that match <query>`
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
