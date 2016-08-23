@@ -53,28 +53,28 @@ helpContents = (name, commands) ->
   """
 
 module.exports = (robot) ->
-  robot.respond /help(?:\s+(.*))?$/i, (msg) ->
+  robot.respond /help(?:\s+(.*))?$/i, (res) ->
     cmds = renamedHelpCommands(robot)
-    filter = msg.match[1]
+    filter = res.match[1]
 
     if filter
       cmds = cmds.filter (cmd) ->
         cmd.match new RegExp(filter, 'i')
       if cmds.length == 0
-        msg.send "No available commands match #{filter}"
+        res.send "No available commands match #{filter}"
         return
 
     emit = cmds.join "\n"
-
-    robot.send {room: msg.message.user.name}, emit
+    room = robot.adapter.client.rtm.dataStore.getDMByName res.message.user.name
+    robot.send {room: room.id}, emit
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = renamedHelpCommands(robot).map (cmd) ->
       cmd.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
 
     emit = "<p>#{cmds.join '</p><p>'}</p>"
-
-    emit = emit.replace new RegExp("#{robot.name}", "ig"), "<b>#{robot.name}</b>"
+    pattern = new RegExp("#{robot.name}", "ig")
+    emit = emit.replace pattern, "<b>#{robot.name}</b>"
 
     res.setHeader 'content-type', 'text/html'
     res.end helpContents robot.name, emit
