@@ -1,6 +1,6 @@
 {
   "name": "hubot-help-private",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "A hubot script to show available hubot commands as private message",
   "main": "src",
   "scripts": {
