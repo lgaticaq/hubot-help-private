@@ -33,7 +33,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.3.3",
+    "codeclimate-test-reporter": "^0.4.0",
     "coffee-coverage": "^1.0.1",
     "coffee-script": "^1.11.1",
     "coffeelint": "^1.16.0",
