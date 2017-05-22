@@ -1,3 +1,32 @@
+#### 1.0.1 (2017-5-22)
+
+##### Chores
+
+* **yarn:** Add yarn.lock ([4f085c44](https://github.com/lgaticaq/hubot-help-private/commit/4f085c44265392a5b65fac165469a0f078cbf448))
+* **package:**
+  * Upgrade devDependencies ([089180c8](https://github.com/lgaticaq/hubot-help-private/commit/089180c8c3b7686ca3c1424256175afbcf77f512))
+  * update coffee-coverage to version 2.0.0 ([5f6474f7](https://github.com/lgaticaq/hubot-help-private/commit/5f6474f79b0362aa5fc82b0b05535ad25fca3446))
+  * update mocha to version 3.1.2 ([20eed550](https://github.com/lgaticaq/hubot-help-private/commit/20eed550c56ba411bea5788b84d396044e354bb8))
+  * update mocha to version 3.1.1 ([f98bd2b6](https://github.com/lgaticaq/hubot-help-private/commit/f98bd2b69f4629097b972d665aee91c48d6f9e07))
+  * update codeclimate-test-reporter to version 0.4.0 ([96fb8c97](https://github.com/lgaticaq/hubot-help-private/commit/96fb8c9794d1636d70cb01f7eeba3e7570b247c9))
+  * update coffeelint to version 1.16.0 ([033b067a](https://github.com/lgaticaq/hubot-help-private/commit/033b067a664f2a53f3fcc1d5137ce8febdf5a1aa))
+  * update coffee-script to version 1.11.1 ([ac4a7a9f](https://github.com/lgaticaq/hubot-help-private/commit/ac4a7a9f7a5ffa0311986809104105b1c1251a92))
+  * update mocha to version 3.1.0 ([22505c15](https://github.com/lgaticaq/hubot-help-private/commit/22505c15ea36912acd2cad9fd3a54ef2add1c464))
+  * update coffee-script to version 1.11.0 ([541219cf](https://github.com/lgaticaq/hubot-help-private/commit/541219cf4dee0453d876ee641092cf610e2be2b6))
+  * update coveralls to version 2.11.14 ([3a027a10](https://github.com/lgaticaq/hubot-help-private/commit/3a027a109d9cb1c841f322027414ec42fb08111e))
+  * update coveralls to version 2.11.13 ([ea66db84](https://github.com/lgaticaq/hubot-help-private/commit/ea66db84a3b258629d4e8553ddbfdd4b462d2337))
+* **travis:** Update node version and add yarn cache ([64a4e975](https://github.com/lgaticaq/hubot-help-private/commit/64a4e9757c9d61835916e8b97ceb5fc030e9bc6b))
+* **nvm:** Update node ([bdc7d3a8](https://github.com/lgaticaq/hubot-help-private/commit/bdc7d3a80355ff11f1aba369583d99a4cee79f2a))
+* **npm:** Update ignores ([4a3977c7](https://github.com/lgaticaq/hubot-help-private/commit/4a3977c778cdce1ab884a7fe31f31dedf793743c))
+
+##### Documentation Changes
+
+* **LICENSE:** Update year ([ab46b242](https://github.com/lgaticaq/hubot-help-private/commit/ab46b2423428d5bbbc655aad75ecc9e7e3030386))
+
+##### Bug Fixes
+
+* **console:** Fix use with terminal ([6ac26679](https://github.com/lgaticaq/hubot-help-private/commit/6ac2667977541402e3feb651b0ba1c3c3848c72c))
+
 ## 1.0.0 (2016-8-23)
 
 ##### Chores
