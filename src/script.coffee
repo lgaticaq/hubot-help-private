@@ -59,28 +59,32 @@ module.exports = (robot) ->
 
     if filter
       cmds = cmds.filter (cmd) ->
-        cmd.match new RegExp(filter, 'i')
+        cmd.match(new RegExp(filter, "i"))
       if cmds.length == 0
-        res.send "No available commands match #{filter}"
+        res.send("No available commands match #{filter}")
         return
 
-    emit = cmds.join "\n"
-    room = robot.adapter.client.rtm.dataStore.getDMByName res.message.user.name
-    robot.send {room: room.id}, emit
+    emit = cmds.join("\n")
+    if robot.adapter.constructor.name in ["SlackBot", "Room"]
+      room = robot.adapter.client.rtm.dataStore.getDMByName(
+        res.message.user.name)
+      robot.send({room: room.id}, emit)
+    else
+      res.send(emit)
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = renamedHelpCommands(robot).map (cmd) ->
-      cmd.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      cmd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
 
-    emit = "<p>#{cmds.join '</p><p>'}</p>"
+    emit = "<p>#{cmds.join "</p><p>"}</p>"
     pattern = new RegExp("#{robot.name}", "ig")
-    emit = emit.replace pattern, "<b>#{robot.name}</b>"
+    emit = emit.replace(pattern, "<b>#{robot.name}</b>")
 
-    res.setHeader 'content-type', 'text/html'
-    res.end helpContents robot.name, emit
+    res.setHeader("content-type", "text/html")
+    res.end(helpContents(robot.name, emit))
 
 renamedHelpCommands = (robot) ->
   robot_name = robot.alias or robot.name
   help_commands = robot.helpCommands().map (command) ->
-    command.replace /^hubot/i, robot_name
+    command.replace(/^hubot/i, robot_name)
   help_commands.sort()
